@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6jqvalry1wc6"
-path="res://.godot/imported/BladeIcon_Peashooter.png-53a72052b9151668b90a381c50c20af3.ctex"
+uid="uid://cl027tjkwupx1"
+path="res://.godot/imported/Icon-暗.png-4be0bd4d061ad85781388c4c564b0872.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/BladeIcon_Peashooter.png"
-dest_files=["res://.godot/imported/BladeIcon_Peashooter.png-53a72052b9151668b90a381c50c20af3.ctex"]
+source_file="res://Assets/Images/Blade/Icon-暗.png"
+dest_files=["res://.godot/imported/Icon-暗.png-4be0bd4d061ad85781388c4c564b0872.ctex"]
 
 [params]
 
