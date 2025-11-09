@@ -8,6 +8,8 @@ extends Area2D
 var board_row = 1
 var board_column = 1
 
+signal attack_signal
+
 
 func _ready():
 	anim.speed_scale = driver.operating_speed
@@ -44,6 +46,7 @@ func attack():
 	bullet.bullet_damage = driver.attack_damage
 	bullet.bullet_durable = driver.bullet_durable
 	add_child(bullet)
+	emit_signal("attack_signal")
 	
 
 func die():
