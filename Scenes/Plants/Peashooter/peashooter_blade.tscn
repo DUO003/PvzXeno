@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbmfasdu30tu0"]
+
+[ext_resource type="Texture2D" uid="uid://b6jqvalry1wc6" path="res://Assets/Images/BladeIcon_Peashooter.png" id="1_2r50g"]
+
+[node name="PeashooterBlade" type="Node2D"]
+
+[node name="BladeIconPeashooter" type="Sprite2D" parent="."]
+texture = ExtResource("1_2r50g")

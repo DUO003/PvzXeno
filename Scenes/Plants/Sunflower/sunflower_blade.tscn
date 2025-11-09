@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhr0vaubiroc2"]
+
+[ext_resource type="Texture2D" uid="uid://do6qrkibrcy1q" path="res://Assets/Images/BladeIcon_Sunflower.png" id="1_f648w"]
+
+[node name="SunflowerBlade" type="Node2D"]
+
+[node name="BladeIconSunflower" type="Sprite2D" parent="."]
+texture = ExtResource("1_f648w")

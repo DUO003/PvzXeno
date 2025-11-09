@@ -1,0 +1,86 @@
+[gd_scene load_steps=19 format=3 uid="uid://gx4ha52088dp"]
+
+[ext_resource type="Script" uid="uid://bd0vbp60ccygb" path="res://Scripts/Plants/Peashooter/peashooter.gd" id="1_ra83a"]
+[ext_resource type="Script" uid="uid://dbob1e8tbbfja" path="res://Scripts/Plants/plant_driver.gd" id="2_6ti60"]
+[ext_resource type="PackedScene" uid="uid://dfakfi3fflsnp" path="res://Scenes/Bullet/bullet_pea.tscn" id="3_y3blm"]
+[ext_resource type="Texture2D" uid="uid://cuyew74ljqym8" path="res://Assets/Images/Plants/Peashooter/Peashooter_1.png" id="4_ynun1"]
+[ext_resource type="Texture2D" uid="uid://b7x3snox8irn6" path="res://Assets/Images/Plants/Peashooter/Peashooter_2.png" id="5_h4bh3"]
+[ext_resource type="Texture2D" uid="uid://cl21swr3vpceu" path="res://Assets/Images/Plants/Peashooter/Peashooter_3.png" id="6_tpmyg"]
+[ext_resource type="Texture2D" uid="uid://ckj420tabtjmx" path="res://Assets/Images/Plants/Peashooter/Peashooter_4.png" id="7_7ostr"]
+[ext_resource type="Texture2D" uid="uid://cffmb6na08v3w" path="res://Assets/Images/Plants/Peashooter/Peashooter_5.png" id="8_s7fqj"]
+[ext_resource type="Texture2D" uid="uid://fslr4ic7gcq6" path="res://Assets/Images/Plants/Peashooter/Peashooter_6.png" id="9_tsqnh"]
+[ext_resource type="Texture2D" uid="uid://du4jy5bd4bfck" path="res://Assets/Images/Plants/Peashooter/Peashooter_7.png" id="10_nu3uv"]
+[ext_resource type="Texture2D" uid="uid://ybd1ti3htnxs" path="res://Assets/Images/Plants/Peashooter/Peashooter_8.png" id="11_et5rt"]
+[ext_resource type="Texture2D" uid="uid://dxq16coet7hry" path="res://Assets/Images/Plants/Peashooter/Peashooter_9.png" id="12_o2jff"]
+[ext_resource type="Texture2D" uid="uid://dml63sjf76oou" path="res://Assets/Images/Plants/Peashooter/Peashooter_10.png" id="13_3oukn"]
+[ext_resource type="Texture2D" uid="uid://cww1mq1cpiyk6" path="res://Assets/Images/Plants/Peashooter/Peashooter_11.png" id="14_m46pc"]
+[ext_resource type="Texture2D" uid="uid://bhkslkvg6bbuq" path="res://Assets/Images/Plants/Peashooter/Peashooter_12.png" id="15_vb0tx"]
+[ext_resource type="Texture2D" uid="uid://diq3e3j7mpvvu" path="res://Assets/Images/Plants/Peashooter/Peashooter_13.png" id="16_41xpd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aq0sf"]
+size = Vector2(80, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kujyd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ynun1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h4bh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tpmyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7ostr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_s7fqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tsqnh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nu3uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_et5rt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_o2jff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3oukn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_m46pc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vb0tx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_41xpd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Peashooter" type="Area2D" node_paths=PackedStringArray("driver", "anim") groups=["Plant"]]
+script = ExtResource("1_ra83a")
+driver = NodePath("PeashooterDriver")
+anim = NodePath("AnimatedSprite2D")
+
+[node name="PeashooterDriver" type="Node2D" parent="."]
+script = ExtResource("2_6ti60")
+attack_timer = 1.4
+bullet_type = ExtResource("3_y3blm")
+attack_damage = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_aq0sf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kujyd")
+frame_progress = 0.10284403
