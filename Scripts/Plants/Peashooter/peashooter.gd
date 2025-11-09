@@ -12,6 +12,8 @@ func _ready():
 	anim.speed_scale = driver.operating_speed
 	anim.play("default")
 	
+	print(driver.operating_speed)
+	
 	if driver.face_foward == false:
 		$AnimatedSprite2D.flip_h = true
 

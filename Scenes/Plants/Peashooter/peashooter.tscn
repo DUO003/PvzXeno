@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://gx4ha52088dp"]
+[gd_scene load_steps=20 format=3 uid="uid://gx4ha52088dp"]
 
 [ext_resource type="Script" uid="uid://bd0vbp60ccygb" path="res://Scripts/Plants/Peashooter/peashooter.gd" id="1_ra83a"]
 [ext_resource type="Script" uid="uid://dbob1e8tbbfja" path="res://Scripts/Plants/plant_driver.gd" id="2_6ti60"]
 [ext_resource type="PackedScene" uid="uid://dfakfi3fflsnp" path="res://Scenes/Bullet/bullet_pea.tscn" id="3_y3blm"]
+[ext_resource type="PackedScene" uid="uid://cbmfasdu30tu0" path="res://Scenes/Plants/Peashooter/peashooter_blade.tscn" id="4_6ti60"]
 [ext_resource type="Texture2D" uid="uid://cuyew74ljqym8" path="res://Assets/Images/Plants/Peashooter/Peashooter_1.png" id="4_ynun1"]
 [ext_resource type="Texture2D" uid="uid://b7x3snox8irn6" path="res://Assets/Images/Plants/Peashooter/Peashooter_2.png" id="5_h4bh3"]
 [ext_resource type="Texture2D" uid="uid://cl21swr3vpceu" path="res://Assets/Images/Plants/Peashooter/Peashooter_3.png" id="6_tpmyg"]
@@ -77,6 +78,9 @@ script = ExtResource("2_6ti60")
 attack_timer = 1.4
 bullet_type = ExtResource("3_y3blm")
 attack_damage = 20
+
+[node name="PeashooterBlade" parent="PeashooterDriver" node_paths=PackedStringArray("driver") instance=ExtResource("4_6ti60")]
+driver = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_aq0sf")

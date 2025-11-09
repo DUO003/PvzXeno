@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbmfasdu30tu0"]
+[gd_scene load_steps=3 format=3 uid="uid://cbmfasdu30tu0"]
 
 [ext_resource type="Texture2D" uid="uid://b6jqvalry1wc6" path="res://Assets/Images/BladeIcon_Peashooter.png" id="1_2r50g"]
+[ext_resource type="Script" uid="uid://dlvlgi8etydvo" path="res://Scenes/Plants/Peashooter/peashooter_blade.gd" id="1_6kxpk"]
 
 [node name="PeashooterBlade" type="Node2D"]
+script = ExtResource("1_6kxpk")
 
 [node name="BladeIconPeashooter" type="Sprite2D" parent="."]
 texture = ExtResource("1_2r50g")
