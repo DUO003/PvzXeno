@@ -33,14 +33,14 @@ func _process(delta):
 func attack():
 	#var bullet_position = position
 	var bullet = driver.bullet_type.instantiate()
-	bullet.position = position + driver.bullet_position
+	bullet.position = Vector2(0,0) + driver.bullet_position
 	bullet.bullet_operating_speed = driver.bullet_operating_speed
 	bullet.bullet_velocity = Vector2(600, 0) + driver.bullet_velocity
 	if driver.face_foward == false:
 		bullet.bullet_velocity = -bullet.bullet_velocity
 	bullet.bullet_damage = driver.attack_damage
 	bullet.bullet_durable = driver.bullet_durable
-	get_parent().add_child(bullet)
+	add_child(bullet)
 	
 
 func die():
