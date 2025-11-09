@@ -82,6 +82,8 @@ bullet_type = ExtResource("3_y3blm")
 attack_damage = 20
 health = 300.0
 
+[node name="WallnutBlade2" parent="PeashooterDriver" instance=ExtResource("4_h4bh3")]
+
 [node name="WallnutBlade" parent="PeashooterDriver" instance=ExtResource("4_h4bh3")]
 
 [node name="PeashooterBlade" parent="PeashooterDriver" instance=ExtResource("4_6ti60")]
