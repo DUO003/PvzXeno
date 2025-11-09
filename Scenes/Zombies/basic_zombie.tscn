@@ -286,3 +286,4 @@ shape = SubResource("RectangleShape2D_g1h18")
 
 [node name="ZombieDriver" type="Node2D" parent="."]
 script = ExtResource("53_n4em0")
+health = 200.0
